@@ -1,0 +1,2 @@
+# btcSoloMiner
+ bitcoin solo miner
