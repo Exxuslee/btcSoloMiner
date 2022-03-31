@@ -5,15 +5,18 @@ const Client = require('bitcoin-core');
 const { MerkleTree } = require('merkletreejs');
 const SHA256 = require('crypto-js/sha256');
 var childProcess = require('child_process');
+const serviceAccount = require("./env.json");
+
+
 
 const client = new Client({
     host: 'localhost',
 //    network: 'testnet',
-    network: 'mainnet',
-    username: 'btc',
-    password: 'btc',
-    port: 8332
+    username: serviceAccount.login,
+    password: serviceAccount.passw,
+//    port: 18332
 //    port: 18445
+	port: 8332
 });
 
 let getBlockTemplate;
